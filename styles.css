@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Manrope';
+    background-color: var(--Light-Grayish-Blue);
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  :root{
+
+    /* Colors */
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+    /* Fonts */
+    --font-size: 13px;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+  }
+
+  .card{
+    background-color: white;
+    width: 90vw;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    max-width: 430px;
+  }
+  .card__image{
+    max-width: 100%; 
+    height: auto;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+  }
+  .card__content{
+    position: relative;
+  }
+
+  .card_headline,
+  .card_text,
+  .card_footer-container{
+    padding: 0 2.2rem;
+  }
+  .card_headline{
+    margin: 2rem 0 1rem;
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: var(--font-weight-700);
+    line-height: 1.5rem;
+    font-size: 1.05rem;
+  }
+  .card_text{
+    font-size: .85rem;
+    color: var(--Desaturated-Dark-Blue);
+    font-weight: var(--font-weight-500);
+    line-height: 1.3rem;
+  }
+  .card_footer-container{
+    display: flex;
+    width: 100%;
+    margin: 2rem 0 1.3rem;
+    align-items: center;
+    position: relative;
+  }
+  .card__profile-picture{
+    border-radius: 4rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+  }
+  .card__name-date-div{
+    display: flex;
+    flex-direction: column;
+    row-gap: .1rem;
+    justify-content: center;
+    height: 100%;
+    flex: 1;
+  }
+  .card__user-name{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: var(--font-weight-700);
+    font-size: .8rem;
+  }
+  .card_date{
+    color: var(--Grayish-Blue);
+    font-weight: var(--font-weight-500);
+    font-size: .8rem;
+  }
+  .card__share-button{
+    border-radius: 3rem;
+    border: none;
+    padding: .5rem;
+    background-color: var(--Light-Grayish-Blue);
+    cursor: pointer;
+  }
+  
+
+  .card__share-container{
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .card__share-button--dark{
+    border-radius: 3rem;
+    border: none;
+    padding: .5rem;
+    background-color: var(--Desaturated-Dark-Blue);
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .card__share-button-icon-dark{
+    filter: brightness(0) invert(1); 
+  }
+  .card__share-text{
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    font-weight: var(--font-weight-500);
+    letter-spacing: .25rem;
+    font-size: .8rem;
+  }
+
+  .hidden {
+    display: none;
+}
+
+  @media (min-width: 768px) {
+    .card{
+        flex-direction: row;
+        object-fit: cover;
+        max-width: 720px;
+        max-height: 600px;
+    }
+    .card__image{
+        width: 40%; 
+        height: 100%;
+        border-bottom-left-radius: .5rem;
+        border-top-right-radius: 0;
+    }
+    .card_headline{
+        font-size: 1.3rem;
+    }
+    .card_footer-container{
+        margin: 1.35rem 0 1.7rem;
+    }
+    .card__share-container{
+        position: absolute;
+        bottom: 5rem;
+        right: -4rem;
+        width: auto;
+        border-radius: .5rem;
+        padding: 1rem 2rem;
+    }
+    .card__share-container::after {
+        content: '';
+        position: absolute;
+        bottom: -9px;  
+        left: 50%;  
+        transform: translateX(-50%);  
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid var(--Very-Dark-Grayish-Blue);;  
+    }
+
+  }
+
+
+
+  
